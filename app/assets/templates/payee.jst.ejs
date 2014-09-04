@@ -1,0 +1,23 @@
+<% if (payee.escape("address") !== "Address not provided.") { %>
+<div class="image-container img-business">
+</div>
+<% } else { %>
+<div class="image-container img-person">
+</div>
+<% } %>
+<div class="name-address-outer-container">
+	<div class="name-address-inner-container">
+		<div class="payee-name">
+			<%= payee.escape("name") %>
+		</div>
+		<div class="payee-address">
+			<%= payee.escape("address") %>
+		</div>
+	</div>
+	<% if (payee.escape("address") !== "Address not provided.") { %>
+	<div class="make-payment-bg tooltip" title="Make a Payment">
+		<div class="payment-image">
+		</div>
+	</div>
+	<% } %>
+</div>
